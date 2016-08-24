@@ -1,0 +1,5 @@
+
+- file: src=/{{ ansible_hostname }}/ dest=/etc/"
+  notify:
+    - reload networking
+    - restart quagga

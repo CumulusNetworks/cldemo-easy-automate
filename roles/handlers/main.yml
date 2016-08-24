@@ -1,0 +1,5 @@
+- name: reload networking
+  command: ifreload -a
+
+- name: restart quagga
+  service: name=quagga state=restarted

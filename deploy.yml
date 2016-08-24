@@ -1,0 +1,6 @@
+- hosts: devices
+  user: cumulus
+  become: yes
+  become_method: sudo
+  roles:
+    - autonet
