@@ -52,7 +52,7 @@ if __name__ == '__main__':
         for l in files.splitlines():
             if l.endswith(':'):
                 current_dir = l.split(':')[0]
-            elif l and not l.endswith('/') and (current_dir not in EXCLUDE):
+            elif l and not l.endswith('/') and "%s/%s"%(current_dir, l) and (current_dir not in EXCLUDE):
                 content = run(ssh, "cat %s/%s"%(current_dir, l))
                 try:
                     os.makedirs('roles/autonet/files/%s/%s'%(device, current_dir.split('etc', 1)[-1]))
