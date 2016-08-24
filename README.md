@@ -56,3 +56,13 @@ reprovisioning it using our new easyautomate clone.
     git clone https://github.com/MYFORK/easyautomate
     cd easyautomate
     ansible-playbook deploy.yml
+
+After a while, you will become more comfortable with the configuration and not
+need to edit configuration on the box anymore. You can just edit files in the
+ansible playbook directly. Let's add swp50 by editing the configuration
+directly on github's website.
+
+    git pull
+    ansible-playbook deploy.yml
+    ssh leaf01
+    ping 10.51.0.1
