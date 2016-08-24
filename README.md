@@ -32,16 +32,19 @@ Now configure the networking.
     exit
     exit
 
-
 On github, create a fork of https://github.com/cumulusnetworks/easyautomate -
 this will represent our devops single source of truth.
 
     git clone https://github.com/MYFORK/easyautomate
+    cd easyautomate
     python collect.py leaf01,leaf02
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
+    git add --all
     git commit -am "First pull of config"
     git push
 
-Now look on github and see the configs.
+Look on github and see the configs.
 
 We will now simulate a network failure by destroying our entire topology and
 reprovisioning it using our new easyautomate clone.
@@ -51,4 +54,5 @@ reprovisioning it using our new easyautomate clone.
     vagrant ssh oob-mgmt-server
     sudo su - cumulus
     git clone https://github.com/MYFORK/easyautomate
+    cd easyautomate
     ansible-playbook deploy.yml
