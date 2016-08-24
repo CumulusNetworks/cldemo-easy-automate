@@ -23,6 +23,7 @@ if __name__ == '__main__':
     # Create directories
     for device in devices:
         try:
+            os.system('rm -rf roles/autonet/files/%s'%device)
             os.makedirs('roles/autonet/files/%s/network'%device)
             os.makedirs('roles/autonet/files/%s/quagga'%device)
             os.makedirs('roles/autonet/files/%s/cumulus'%device)
