@@ -1,0 +1,2 @@
+# cldemo-easy-automate
+Prototype
