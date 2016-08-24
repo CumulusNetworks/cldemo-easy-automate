@@ -1,7 +1,8 @@
 
-- file: src=/{{ item }}/ dest=/etc/{{item}}
+- copy: src=/{{ item }}/ dest=/etc/{{item}}
   notify:
     - reload networking
     - restart quagga
-  with_fileglob:
-    - "{{ansible_hostname}}/*"
+
+#  with_fileglob:
+#    - "{{ansible_hostname}}/*"
