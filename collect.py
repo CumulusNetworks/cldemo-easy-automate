@@ -20,9 +20,9 @@ if __name__ == '__main__':
     # Create directories
     for device in devices:
         try:
-            os.makedirs('roles/%s/network'%device)
-            os.makedirs('roles/%s/quagga'%device)
-            os.makedirs('roles/%s/cumulus'%device)
+            os.makedirs('roles/autonet/files/%s/network'%device)
+            os.makedirs('roles/autonet/files/%s/quagga'%device)
+            os.makedirs('roles/autonet/files/%s/cumulus'%device)
         except os.error:
             pass
 
@@ -51,8 +51,8 @@ if __name__ == '__main__':
             elif l and not l.endswith('/'):
                 content = run(ssh, "cat %s/%s"%(current_dir, l))
                 try:
-                    os.makedirs('roles/%s/%s'%(device, current_dir.split('etc', 1)[-1]))
+                    os.makedirs('roles/autonet/files/%s/%s'%(device, current_dir.split('etc', 1)[-1]))
                 except os.error:
                     pass
-                with file('roles/%s/%s/%s'%(device, current_dir.split('etc', 1)[-1], l), 'w') as f:
+                with file('roles/autonet/files/%s/%s/%s'%(device, current_dir.split('etc', 1)[-1], l), 'w') as f:
                     f.write(content)
