@@ -34,13 +34,13 @@ if __name__ == '__main__':
 
         # Figure out all the files we're gonna hit
         files = "/etc/network:\n"
-        files += run(ssh, 'ls -R1 /etc/network')
+        files += run(ssh, 'ls -pR1 /etc/network')
         files += "\n"
         files += "/etc/quagga:\n"
-        files += run(ssh, 'ls -R1 /etc/quagga')
+        files += run(ssh, 'ls -pR1 /etc/quagga')
         files += "\n"
         files += "/etc/cumulus:\n"
-        files += run(ssh, 'ls -R1 /etc/cumulus')
+        files += run(ssh, 'ls -pR1 /etc/cumulus')
         files += "\n"
 
         current_dir = ''
