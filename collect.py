@@ -23,6 +23,8 @@ if __name__ == '__main__':
             os.makedirs('roles/autonet/files/%s/network'%device)
             os.makedirs('roles/autonet/files/%s/quagga'%device)
             os.makedirs('roles/autonet/files/%s/cumulus'%device)
+            if device not in file('hosts').readlines():
+                file('hosts', 'a').write("%s\n"%device)
         except os.error:
             pass
 
@@ -45,7 +47,6 @@ if __name__ == '__main__':
 
         current_dir = ''
         for l in files.splitlines():
-            l = l.strip()
             if l.endswith(':'):
                 current_dir = l.split(':')[0]
             elif l and not l.endswith('/'):
