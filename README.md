@@ -46,6 +46,9 @@ this will represent our devops single source of truth.
 
 Look on github and see the configs.
 
+![img/fig1.png](img/fig1.png)
+
+
 We will now simulate a network failure by destroying our entire topology and
 reprovisioning it using our new easyautomate clone.
 
