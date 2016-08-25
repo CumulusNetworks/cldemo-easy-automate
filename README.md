@@ -47,7 +47,8 @@ this will represent our devops single source of truth.
 Look on github and see the configs.
 
 ![img/fig1.png](img/fig1.png)
-
+![img/fig2.png](img/fig2.png)
+![img/fig3.png](img/fig3.png)
 
 We will now simulate a network failure by destroying our entire topology and
 reprovisioning it using our new easyautomate clone.
@@ -64,6 +65,9 @@ After a while, you will become more comfortable with the configuration and not
 need to edit configuration on the box anymore. You can just edit files in the
 ansible playbook directly. Let's add swp50 by editing the configuration
 directly on github's website.
+
+![img/fig1.png](img/fig4.png)
+![img/fig1.png](img/fig5.png)
 
     git pull
     ansible-playbook deploy.yml
