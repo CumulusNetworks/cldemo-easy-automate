@@ -1,3 +1,6 @@
+# DEPRECATED
+## This repo is no longer maintained.<br>For a list of current demos, please visit:<br>https://gitlab.com/cumulus-consulting/goldenturtle/<br><br><br>
+
 Easy Automation Demo
 ====================
 This demo shows how to get started with automation by starting with the configuration already on the switches in your network. The ideal audience for this demo is an organization with a small network who aspires to migrate from a transactional operation scheme to an infrastructure-as-code scheme. This demo is designed to be used as a starting point in order to become comfortable with 
